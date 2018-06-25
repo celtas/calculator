@@ -1,17 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Data;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Windows;
+﻿namespace Calculator {
+    using Calculator.View;
+    using System.Windows;
 
-namespace Calclator
-{
     /// <summary>
     /// App.xaml の相互作用ロジック
     /// </summary>
-    public partial class App : Application
-    {
+    public partial class App : Application {
+        private void Application_Startup(object sender, StartupEventArgs e) {
+            var view = new MainView();
+            view.Show();
+        }   
     }
 }
